@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 1
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div (click)="birthday($event)">
+    {{age}}{{postObj["myname"]}}
+  </div>
+  <div (click)="setStorage()">SET</div>
+  <div (click)="getStorage()">GET</div>
+
+  <form (submit)="navigate()">
+    <ion-item>
+      <ion-label>id</ion-label>
+      <ion-input type="text" [(ngModel)]="id" name="id"></ion-input>
+      <ion-label>password</ion-label>
+      <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
+    </ion-item>
+
+    <ion-button type="submit">ログイン</ion-button>
+  </form>
+
+  <div (click)="getOtherPage()">MOVE</div>
+
+  <div (click)="login()">LOGIN</div>
+</ion-content>
